@@ -1,0 +1,22 @@
+mixin getRIcon(name)
+  i(class='fi-rr-' + name)
+
+.container 
+  .image-wapper(style="background-image: url(https://st.depositphotos.com/2209782/2833/i/600/depositphotos_28336025-stock-photo-clothes-on-a-rack.jpg)")
+    h1 Restore Account
+  .form-wapper
+    .form-header
+      h2 Forgot Password?
+      p Enter your email and we'll send you instructions to reset your password.
+    .form-body
+      form
+        .input-wrapper
+          label(for="email") Email
+          input#email(type="email" name="email" placeholder="john@example.com")
+        button(type="submit") Send Reset Link
+
+    .form-footer
+      p
+        span.icon
+          +getRIcon('angle-small-left')
+        a.form-link(href="./auth-login.html") Back To Login
